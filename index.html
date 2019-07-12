@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Berkshire Hathaway</title>
+        <meta charset="UTF-8" />
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    </head>
+    <body>
+        <div class="reasonListContainer"></div>
+        <script>
+            // Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDYTz8DFM_VACXe9Tjt3bSTI_zhL4EZeT4",
+                authDomain: "",
+                databaseURL: "https://berkshire-hathaway-13d3d.firebaseio.com/",
+                projectId: "berkshire-hathaway-13d3d",
+                storageBucket: "gs://berkshire-hathaway-13d3d.appspot.com",
+                messagingSenderId: "993714685183",
+                appId: "1:993714685183:web:e86bd59dc70ba26e",
+            };
+
+            firebase.initializeApp(firebaseConfig);
+
+            // Request data from Firebase
+            var dbRef = firebase
+                .database()
+                .ref()
+                .child("reason");
+
+            // Setup event handler for realtime data refresh
+            dbRef.on("value", snap => {
+                reasonList.append(snap.val());
+            });
+
+            // create list reference
+            const reasonList = document.querySelector(".reasonListContainer");
+        </script>
+    </body>
+</html>

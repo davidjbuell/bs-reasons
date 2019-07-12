@@ -1,0 +1,187 @@
+html {
+    box-sizing: border-box !important;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit !important;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 250px;
+    position: relative;
+    background: linear-gradient(150deg, #53f 15%, #05d5ff 84%);
+}
+
+main {
+    padding-top: 50px;
+}
+
+h1 {
+    margin: 20px 20%;
+    position: relative;
+    text-align: center;
+}
+
+input,
+textarea {
+    font-family: "Muli", sans-serif;
+}
+
+.addReason {
+    background: #b9f4bc;
+    border: none;
+    border-radius: 50%;
+    color: rgb(20, 183, 117);
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 23px;
+    outline: none;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    transition: 0.15s all linear;
+    width: 50px;
+}
+
+.addReason:hover {
+    background: #ccc;
+    color: #333;
+}
+
+.addReason.close {
+    background: rgb(246, 164, 235);
+    color: #b76ac4;
+    transform: rotate(45deg);
+}
+
+.logo {
+    color: #fff;
+    display: block;
+    height: 250px;
+    line-height: 250px;
+    font-size: 42px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.reasonListContainer {
+    padding: 0 20%;
+    position: relative;
+    transition: 0.15s all linear;
+}
+
+.reasonListContainer ul {
+    list-style-type: none;
+    padding: 20px 0 0;
+}
+
+.reasonListContainer li {
+    border-radius: 4px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    padding: 0;
+    max-height: 1000px;
+    opacity: 1;
+    position: relative;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1), 0 8px 16px -8px rgba(0, 0, 0, 0.15), 0 -6px 16px -6px rgba(0, 0, 0, 0.02);
+    transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1), 1.5s max-height cubic-bezier(0.4, 0, 0.2, 1), 1.5s opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reasonListContainer li[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+    transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1), 0.5s max-height cubic-bezier(0.4, 0, 0.2, 1), 0.5s opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reasonListContainer h2 {
+    background: #efefef;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+
+.reasonListContainer p {
+    padding: 10px 20px;
+}
+
+.reasonListContainer small {
+    display: block;
+    font-style: italic;
+    padding: 5px 0;
+    text-align: right;
+}
+
+.reasonFormContainer {
+    display: block;
+    height: auto;
+    max-height: 1000px;
+    opacity: 1;
+    position: relative;
+    transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1), 1.5s max-height cubic-bezier(0.4, 0, 0.2, 1), 1.5s opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reasonFormContainer.inactive {
+    max-height: 0;
+    opacity: 0;
+    transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1), 0.5s max-height cubic-bezier(0.4, 0, 0.2, 1), 0.5s opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reasonForm {
+    border-radius: 4px;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1), 0 8px 16px -8px rgba(0, 0, 0, 0.15), 0 -6px 16px -6px rgba(0, 0, 0, 0.02);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.reasonForm input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.reasonForm input[type="text"] {
+    background: #efefef;
+    border: none;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.reasonForm textarea {
+    border: none;
+    display: block;
+    font-size: 16px;
+    padding: 20px;
+    width: 100%;
+}
+
+.btnSave {
+    background: rgb(20, 183, 117);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    float: right;
+    font-size: 19px;
+    margin: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.15s background-color linear;
+}
+
+.btnSave:hover {
+    background: #333;
+}
